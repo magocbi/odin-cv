@@ -31,11 +31,15 @@ describe('Form', () => {
     const inputElement = screen.getByDisplayValue(input.value);
     expect(inputElement).toBeInTheDocument();
   });
-  test('should call upon callback when input is changed by user', () => {
-    render(<Form onChange={onChangeMocked} fields={[{}]} />);
+  test('should call upon callback when input is changed by user with the input name', () => {
+    render(<Form onChange={onChangeMocked} fields={[{ name: 'email' }]} />);
     const inputElement = screen.getByDisplayValue('');
     const typedText = 'testing input change';
     userEvent.type(inputElement, typedText);
     expect(onChangeMocked).toHaveBeenCalledTimes(typedText.length);
+    expect(onChangeMocked).toHaveBeenCalledWith(
+      'email',
+      'testing input change'
+    );
   });
 });

@@ -10,7 +10,7 @@ export class Form extends Component {
           value={value}
           name={name}
           key={index}
-          onChange={this.props.onChange}
+          onChange={(e) => this.props.onChange(name, e.target.value)}
         />
       )
     );
