@@ -38,3 +38,28 @@ body {
 .btn-add {
   background-color: hsl(236 96% 43%);
 }
+
+.toggle-edit-btn {
+  cursor: pointer;
+  position: fixed;
+  top: 50%;
+  left: 1%;
+  border-radius: 0.25rem;
+  color: yellow;
+  font-weight: bold;
+  font-size: 1.5rem;
+  background-color: hsl(0, 65%, 48%);
+  outline: 0;
+  border: 0;
+  max-width: 2rem;
+  height: 2rem;
+  padding-left: 0.4em;
+  overflow-x: hidden;
+  letter-spacing: 0.25em;
+  transition: max-width 1s ease-out;
+}
+
+.toggle-edit-btn:hover {
+  max-width: 10rem;
+  letter-spacing: 0.1em;
+}

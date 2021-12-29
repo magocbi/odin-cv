@@ -121,10 +121,15 @@ class App extends Component {
     });
   };
 
+  toggleEdit = () => this.setState((prev) => ({ editing: !prev.editing }));
+
   render() {
     const { generalInfo, educationalInfo, workInfo, editing } = this.state;
     return (
       <div className='App'>
+        <button className='toggle-edit-btn' onClick={this.toggleEdit}>
+          {editing ? 'Preview' : 'Edit'}
+        </button>
         {editing ? (
           <CVEdit
             generalInformation={generalInfo}
