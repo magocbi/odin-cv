@@ -4,6 +4,7 @@ import Form from '../Form/Form';
 export default class GeneralInfoForm extends Component {
   render() {
     const { name, email, phoneNumber, address } = this.props.fields;
+    const { onChange } = this.props;
     const fields = [
       {
         type: 'text',
@@ -32,7 +33,7 @@ export default class GeneralInfoForm extends Component {
     ];
     return (
       <div>
-        <Form fields={fields} />
+        <Form fields={fields} onChange={onChange} />
       </div>
     );
   }

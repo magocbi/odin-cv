@@ -7,12 +7,15 @@ export default class CVEdit extends Component {
   render() {
     const {
       generalInformation,
+      onGeneralChange,
       educationalList,
       workList,
       onEducationDelete,
       onEducationAddition,
+      onEducationChange,
       onWorkDelete,
       onWorkAddition,
+      onWorkChange,
     } = this.props;
 
     const educationalFormList = educationalList.map((education) => (
@@ -20,6 +23,7 @@ export default class CVEdit extends Component {
         fields={education}
         id={education.id}
         onDelete={onEducationDelete}
+        onChange={onEducationChange}
         key={education.id}
       />
     ));
@@ -28,12 +32,16 @@ export default class CVEdit extends Component {
         fields={work}
         id={work.id}
         onDelete={onWorkDelete}
+        onChange={onWorkChange}
         key={work.id}
       />
     ));
     return (
       <div>
-        <GeneralInfoForm fields={generalInformation} />
+        <GeneralInfoForm
+          fields={generalInformation}
+          onChange={onGeneralChange}
+        />
         {educationalFormList}
         <button onClick={onEducationAddition}>
           Add Educational Experience

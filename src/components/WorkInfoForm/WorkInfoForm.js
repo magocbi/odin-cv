@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import Form from '../Form/Form';
 
 export default class WorkInfoForm extends Component {
+  onInputChange = (name, value) =>
+    this.props.onChange(this.props.id, name, value);
+
   render() {
     const { companyName, position, from, to, description } = this.props.fields;
     const { id, onDelete } = this.props;
@@ -40,7 +43,7 @@ export default class WorkInfoForm extends Component {
 
     return (
       <div>
-        <Form fields={fields} />
+        <Form fields={fields} onChange={this.onInputChange} />
         <button onClick={() => onDelete(id)}>Delete</button>
       </div>
     );

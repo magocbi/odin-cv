@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import Form from '../Form/Form';
 
 export default class EducationalInfoForm extends Component {
+  onInputChange = (name, value) =>
+    this.props.onChange(this.props.id, name, value);
+
   render() {
     const { schoolName, degree, from, to } = this.props.fields;
     const { id, onDelete } = this.props;
@@ -34,7 +37,7 @@ export default class EducationalInfoForm extends Component {
 
     return (
       <div>
-        <Form fields={fields} />
+        <Form fields={fields} onChange={this.onInputChange} />
         <button onClick={() => onDelete(id)}>Delete</button>
       </div>
     );
