@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../../styles/Form.css';
 
 export class Form extends Component {
   render() {
@@ -7,6 +8,7 @@ export class Form extends Component {
         if (type === 'textarea')
           return (
             <textarea
+              className='cv-field no-resize'
               placeholder={placeholder}
               value={value}
               name={name}
@@ -17,6 +19,7 @@ export class Form extends Component {
         else
           return (
             <input
+              className='cv-field'
               type={type}
               placeholder={placeholder}
               value={value}
@@ -28,7 +31,7 @@ export class Form extends Component {
       }
     );
 
-    return <div>{fields}</div>;
+    return <div className='cv-section'>{fields}</div>;
   }
 }
 

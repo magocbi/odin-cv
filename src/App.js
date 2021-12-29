@@ -3,6 +3,8 @@ import CVEdit from './components/CVEdit/CVEdit';
 
 import uniqid from 'uniqid';
 
+import './styles/app.css';
+
 const initialState = {
   generalInfo: {
     name: '',
@@ -29,6 +31,7 @@ const initialState = {
       id: uniqid('work'),
     },
   ],
+  editing: true,
 };
 
 class App extends Component {
@@ -119,21 +122,25 @@ class App extends Component {
   };
 
   render() {
-    const { generalInfo, educationalInfo, workInfo } = this.state;
+    const { generalInfo, educationalInfo, workInfo, editing } = this.state;
     return (
       <div className='App'>
-        <CVEdit
-          generalInformation={generalInfo}
-          onGeneralChange={this.editGeneral}
-          educationalList={educationalInfo}
-          workList={workInfo}
-          onEducationAddition={this.addEducation}
-          onEducationDelete={this.deleteEducation}
-          onEducationChange={this.editEducation}
-          onWorkAddition={this.addWork}
-          onWorkDelete={this.deleteWork}
-          onWorkChange={this.editWork}
-        />
+        {editing ? (
+          <CVEdit
+            generalInformation={generalInfo}
+            onGeneralChange={this.editGeneral}
+            educationalList={educationalInfo}
+            workList={workInfo}
+            onEducationAddition={this.addEducation}
+            onEducationDelete={this.deleteEducation}
+            onEducationChange={this.editEducation}
+            onWorkAddition={this.addWork}
+            onWorkDelete={this.deleteWork}
+            onWorkChange={this.editWork}
+          />
+        ) : (
+          'DISPLAY INFO'
+        )}
       </div>
     );
   }

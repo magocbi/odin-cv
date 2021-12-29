@@ -32,7 +32,7 @@ export default class GeneralInfoForm extends Component {
       },
     ];
     return (
-      <div>
+      <div className='cv-form-list'>
         <Form fields={fields} onChange={onChange} />
       </div>
     );

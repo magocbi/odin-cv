@@ -1,0 +1,15 @@
+.cv-edit {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  width: min(900px, 90%);
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.cv-form-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding-bottom: 0.5em;
+}

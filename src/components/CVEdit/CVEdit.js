@@ -3,6 +3,8 @@ import GeneralInfoForm from '../GeneralInfoForm/GeneralInfoForm';
 import EducationInfoForm from '../EducationalInfoForm/EducationalInfoForm';
 import WorkInfoForm from '../WorkInfoForm/WorkInfoForm';
 
+import '../../styles/CVEdit.css';
+
 export default class CVEdit extends Component {
   render() {
     const {
@@ -37,17 +39,24 @@ export default class CVEdit extends Component {
       />
     ));
     return (
-      <div>
+      <div className='cv-edit'>
+        <h2 className='cv-form-header'>General Information</h2>
         <GeneralInfoForm
           fields={generalInformation}
           onChange={onGeneralChange}
         />
+
+        <h2 className='cv-form-header'>Educational Experience</h2>
         {educationalFormList}
-        <button onClick={onEducationAddition}>
+        <button className='btn-add' onClick={onEducationAddition}>
           Add Educational Experience
         </button>
+
+        <h2 className='cv-form-header'>Work Experience</h2>
         {workFormList}
-        <button onClick={onWorkAddition}>Add Work Experience</button>
+        <button className='btn-add' onClick={onWorkAddition}>
+          Add Work Experience
+        </button>
       </div>
     );
   }

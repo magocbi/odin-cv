@@ -1,0 +1,40 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.btn-delete,
+.btn-add {
+  cursor: pointer;
+  color: #fff;
+  text-align: center;
+  padding: 0.4em 1.2em;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  outline: 0;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.btn-delete {
+  background-color: hsl(0, 65%, 48%);
+}
+
+.btn-delete:hover {
+  transform: scale(1.025);
+  background-color: hsl(0 65% 48% / 0.8);
+}
+
+.btn-add:hover {
+  transform: scale(1.025);
+  background-color: hsl(236 96% 43% / 0.8);
+}
+
+.btn-add {
+  background-color: hsl(236 96% 43%);
+}

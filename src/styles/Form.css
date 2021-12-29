@@ -1,0 +1,16 @@
+.cv-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cv-section .cv-field {
+  font-size: 1.2rem;
+  padding: 0.25em 0.75em;
+  border-radius: 0.25rem;
+}
+
+.cv-field.no-resize {
+  resize: none;
+  min-height: 200px;
+}

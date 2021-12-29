@@ -42,9 +42,11 @@ export default class WorkInfoForm extends Component {
     ];
 
     return (
-      <div>
+      <div className='cv-form-list'>
         <Form fields={fields} onChange={this.onInputChange} />
-        <button onClick={() => onDelete(id)}>Delete</button>
+        <button className='btn-delete' onClick={() => onDelete(id)}>
+          Delete
+        </button>
       </div>
     );
   }
