@@ -9,13 +9,13 @@ export default class GeneralInfoDisplay extends Component {
         <h1 className='name'>{name}</h1>
         <ul className='details'>
           <li>
-            <span class='detail-header'>Email:</span> {email}
+            <span className='detail-header'>Email:</span> {email}
           </li>
           <li>
-            <span class='detail-header'>Phone:</span> {phoneNumber}
+            <span className='detail-header'>Phone:</span> {phoneNumber}
           </li>
           <li>
-            <span class='detail-header'>Address:</span> {address}
+            <span className='detail-header'>Address:</span> {address}
           </li>
         </ul>
       </div>
