@@ -56,10 +56,16 @@ body {
   padding-left: 0.4em;
   overflow-x: hidden;
   letter-spacing: 0.25em;
-  transition: max-width 1s ease-out;
+  transition: max-width 0.5s ease-out, letter-spacing 0.5s ease-out;
 }
 
 .toggle-edit-btn:hover {
   max-width: 10rem;
   letter-spacing: 0.1em;
+}
+
+.app-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
 }

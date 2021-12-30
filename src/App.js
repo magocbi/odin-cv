@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import CVEdit from './components/CVEdit/CVEdit';
+import CVDisplay from './components/CVDisplay/CVDisplay';
 
 import uniqid from 'uniqid';
 
@@ -130,6 +131,7 @@ class App extends Component {
         <button className='toggle-edit-btn' onClick={this.toggleEdit}>
           {editing ? 'Preview' : 'Edit'}
         </button>
+        <h1 className='app-title'>CV Creator</h1>
         {editing ? (
           <CVEdit
             generalInformation={generalInfo}
@@ -144,7 +146,11 @@ class App extends Component {
             onWorkChange={this.editWork}
           />
         ) : (
-          'DISPLAY INFO'
+          <CVDisplay
+            generalInformation={generalInfo}
+            educationalList={educationalInfo}
+            workList={workInfo}
+          />
         )}
       </div>
     );

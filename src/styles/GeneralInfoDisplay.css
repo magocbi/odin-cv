@@ -1,0 +1,34 @@
+.general-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.general-info .name {
+  width: 100%;
+  background-color: rgb(4, 115, 189);
+  color: aliceblue;
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.general-info .details {
+  width: 100%;
+  background-color: hsl(177, 96%, 22%);
+  list-style: none;
+  padding: 1rem 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+  color: hsl(177, 100%, 52%);
+}
+
+.details .detail-header {
+  font-weight: 600;
+  color: #fff;
+}
